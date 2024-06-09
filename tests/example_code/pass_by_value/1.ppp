@@ -1,0 +1,9 @@
+def assign(a) {
+    a = 2;
+}
+
+a = 1;
+assign(a);
+print(a);
+
+# Expected: 1

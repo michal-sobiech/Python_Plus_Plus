@@ -1,0 +1,8 @@
+a = True == True;
+print(a);
+
+a = False == False;
+print(a);
+
+a = True == False;
+print(a);

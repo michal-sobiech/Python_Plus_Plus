@@ -1,0 +1,11 @@
+a = True or False;
+print(a);
+
+a = True and False;
+print(a);
+
+a = not True;
+print(a);
+
+a = not False;
+print(a);

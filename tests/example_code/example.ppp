@@ -1,0 +1,15 @@
+def compare(a, b) {
+    return a.value() < b.value();
+}
+
+a = {'a': 2, 'b': 3, 'c': 1};
+
+print('a at the start: ' + string(a));
+
+b = from tuple in a where True orderby compare select tuple.key(), tuple.value();
+
+a.sort(compare);
+
+print('a after sort: ' + string(a));
+
+print('b: ' + string(b));

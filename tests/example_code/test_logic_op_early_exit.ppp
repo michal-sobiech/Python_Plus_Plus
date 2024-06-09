@@ -1,0 +1,27 @@
+def true() {
+    print('True!');
+    return True;
+}
+
+def false() {
+    print('False!');
+    return False;
+}
+
+# Has to check both
+true() and false();
+
+print('');
+
+# Has to check both
+false() or true();
+
+print('');
+
+# Has to check only one
+false() and true();
+
+print('');
+
+# Has to check only one
+true() or false();

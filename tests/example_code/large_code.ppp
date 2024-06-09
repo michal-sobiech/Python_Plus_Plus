@@ -1,0 +1,71 @@
+grades = {
+    'Michał': 5.0,
+    'Adam': 3.5,
+    'Jacek': 4.5,
+    'Olgierd': 5.5,
+    'Antoni': 2.0
+};
+
+
+
+
+def who_has_five_or_above(grade_dict) {
+    query_result = from tuple in grades 
+                   where tuple.value() >= 5.0
+                   select tuple.key();
+    names = [];
+    for e in query_result {
+        names.append(e.at(0));
+    }
+    return names;
+}
+
+who_has_a_very_good_grade = who_has_five_or_above(grades);
+
+msg = 'The best students: ';
+i = 0;
+while i < who_has_a_very_good_grade.length() {
+    name = who_has_a_very_good_grade.at(i);
+    msg = msg + name;
+    if not (i == who_has_a_very_good_grade.length() - 1) {
+        msg = msg + ', ';
+    }
+    i++;
+}
+msg = msg + '.';
+print(msg);
+
+
+
+
+who_has_two = [];
+for pair in grades {
+    if pair.value() == 2.0 {
+        who_has_two.append(pair.key());
+    }
+}
+
+print('Number of people who failed: ' + string(who_has_two.length()));
+
+
+
+
+who_has_good_grade = [];
+who_has_ok_grade = [];
+who_failed = [];
+
+for pair in grades {
+    if pair.value() >= 4.0 {
+        who_has_good_grade.append(pair.key());
+    }
+    elif pair.value() >= 3.0 {
+        who_has_ok_grade.append(pair.key());
+    }
+    else {
+        who_failed.append(pair.key());
+    }
+}
+
+print('Students with good grade: ' + string(who_has_good_grade));
+print('Students with ok grade: ' + string(who_has_ok_grade));
+print('Students with bad grade: ' + string(who_failed));

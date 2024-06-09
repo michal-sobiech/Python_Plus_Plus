@@ -1,0 +1,15 @@
+def a() {
+    print(int('a'));
+}
+
+def b() {
+    a();
+}
+
+def c() {
+    b();
+}
+
+c();
+
+# Expected: an error

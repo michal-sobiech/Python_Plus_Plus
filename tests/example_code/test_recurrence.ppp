@@ -1,0 +1,6 @@
+def a(num) {
+    print(num);
+    a(num + 1);
+}
+
+a(0);

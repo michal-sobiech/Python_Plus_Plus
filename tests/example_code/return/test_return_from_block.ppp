@@ -1,0 +1,11 @@
+def a() {
+    print(1);
+    if True {
+        return;
+    }
+    print(2);
+}
+
+a();
+
+# Expected: 1

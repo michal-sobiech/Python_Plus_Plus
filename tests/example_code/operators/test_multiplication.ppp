@@ -1,0 +1,27 @@
+a = 2 * 3;
+print(a);
+
+a = -2 * 3;
+print(a);
+
+a = 2 * -3;
+print(a);
+
+a = -2 * -3;
+print(a);
+
+
+
+print('');
+
+a = 2.0 * 3.0;
+print(a);
+
+a = -2.0 * 3.0;
+print(a);
+
+a = 2.0 * -3.0;
+print(a);
+
+a = -2.0 * -3.0;
+print(a);

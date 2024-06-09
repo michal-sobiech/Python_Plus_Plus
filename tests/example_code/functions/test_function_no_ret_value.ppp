@@ -1,0 +1,16 @@
+def a() {
+    print(1);
+}
+print(a());
+
+def b() {
+    print(1);
+    return;
+}
+print(b());
+
+# Expected:
+# 1
+# None
+# 1
+# None
